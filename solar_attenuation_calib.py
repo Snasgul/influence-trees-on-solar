@@ -6,8 +6,8 @@ from matplotlib import pyplot as plt
 np.set_printoptions(threshold=1000)
 
 # %%
-#filename = input("Filename: ")
-tree_img = cv2.imread('IMG_0755.JPG')
+filename = input("Filename: ") # IMG_0755.JPG
+tree_img = cv2.imread('C:/Users/patri/OneDrive/Bilder/Tree/measuredTrees/' + filename)
 #plt.imshow(tree_img)
 
 # %%
@@ -35,13 +35,13 @@ mask = cv2.inRange(tree_img, lower_bound, upper_bound)
 cv2.imwrite("C:/Users/patri/OneDrive/Bilder/Tree/test_tree_gray1.jpg", mask)
 
 # %%
-sun_x = 1517
-sun_y = 1467
+sun_x = int(input("Sun position X: ")) # 1517
+sun_y = int(input("Sun position Y: ")) # 1467
 
 sun_radius = int(sun_radius_deg * pix_deg) // 2
 
-pos_x = np.arange(sun_x-sun_radius*2, sun_x+sun_radius*2, int(sun_radius/4))
-pos_y = np.arange(sun_y-sun_radius*2, sun_y+sun_radius*2, int(sun_radius/4))
+pos_x = np.arange(sun_x-sun_radius*4, sun_x+sun_radius*4, int(sun_radius/4))
+pos_y = np.arange(sun_y-sun_radius*4, sun_y+sun_radius*4, int(sun_radius/4))
 
 coords = np.array(np.meshgrid(pos_x, pos_y, )).T.reshape(-1, 2)
 

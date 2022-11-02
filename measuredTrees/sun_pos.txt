@@ -1,0 +1,6 @@
+File		time	File		Sun			Sun in Picture 1	Sun in Picture 2	Picture 2
+					azimuth	altitude	x	y		x	y		azimuth	altitude
+IMG_0709.JPG	13:46	IMG_0755.JPG	190°	29.9°		1724	1573		1517	1467		
+IMG_0713.JPG	14:30	IMG_0747.JPG	202°	27.8°		2676	1362		2425	1609		
+IMG_0722.JPG	14:51	IMG_0739.JPG	208°	26.3°		2045	 971		1401	1881		
+IMG_0728.JPG	15:20	IMG_0735	215°	23.7°		1899	1655		2188	1505		
