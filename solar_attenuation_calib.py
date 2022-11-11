@@ -32,7 +32,7 @@ mask = cv2.inRange(tree_img, lower_bound, upper_bound)
 #plt.imshow(mask, cmap='gray')
 
 # %%
-cv2.imwrite("C:/Users/patri/OneDrive/Bilder/Tree/test_tree_gray1.jpg", mask)
+cv2.imwrite("C:/Users/patri/OneDrive/Bilder/Tree/IMG_0747_gray.jpg", mask)
 
 # %%
 sun_x = int(input("Sun position X: ")) # 1517
@@ -40,8 +40,8 @@ sun_y = int(input("Sun position Y: ")) # 1467
 
 sun_radius = int(sun_radius_deg * pix_deg) // 2
 
-pos_x = np.arange(sun_x-sun_radius*4, sun_x+sun_radius*4, int(sun_radius/4))
-pos_y = np.arange(sun_y-sun_radius*4, sun_y+sun_radius*4, int(sun_radius/4))
+pos_x = np.arange(sun_x-sun_radius*8, sun_x+sun_radius*8, int(sun_radius/4))
+pos_y = np.arange(sun_y-sun_radius*8, sun_y+sun_radius*8, int(sun_radius/4))
 
 coords = np.array(np.meshgrid(pos_x, pos_y, )).T.reshape(-1, 2)
 
@@ -101,6 +101,7 @@ overlay[min_y:max_y,min_x:max_x] = visualization
 whole_visualization = cv2.addWeighted(mask, alpha, overlay, beta, 0.0)
 
 #plt.imshow(whole_visualization, cmap='gray')
+cv2.imwrite("C:/Users/patri/OneDrive/Bilder/Tree/IMG_0747_gray.jpg", whole_visualization)
 
 # %%
 lai = (np.apply_over_axes(np.sum, masked_tree, [2,3]) / (np.sum(circle_mask) // 255)).reshape(len(masked_tree),-1)

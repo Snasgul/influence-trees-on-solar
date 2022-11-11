@@ -1,6 +1,6 @@
-File		time	File		Sun			Sun in Picture 1	Sun in Picture 2	Picture 2
-					azimuth	altitude	x	y		x	y		azimuth	altitude
-IMG_0709.JPG	13:46	IMG_0755.JPG	190°	29.9°		1724	1573		1517	1467		
-IMG_0713.JPG	14:30	IMG_0747.JPG	202°	27.8°		2676	1362		2425	1609		
-IMG_0722.JPG	14:51	IMG_0739.JPG	208°	26.3°		2045	 971		1401	1881		
-IMG_0728.JPG	15:20	IMG_0735	215°	23.7°		1899	1655		2188	1505		
+File		time	File		Sun [°]			Sun in Picture 1 [px]	Sun in Picture 2 [px]	Picture 2 [°]		DNI [W/m2]	DNT [W/m2]	Transmission
+					azimuth	altitude	x	y		x	y		azimuth	altitude			min	max	min	max
+IMG_0709.JPG	13:46	IMG_0755.JPG	190	29.9		1724	1573		1517	1467					898		150	272	0.167	0.303
+IMG_0713.JPG	14:30	IMG_0747.JPG	202	27.8		2676	1362		2425	1609					864		 48	146	0.056	0.169
+IMG_0722.JPG	14:51	IMG_0739.JPG	208	26.3		2045	 971		1401	1881					948		 25	 42	0.026	0.044
+IMG_0728.JPG	15:20	IMG_0735.JPG	215	23.7		1899	1655		2188	1505					939		 55	125	0.059	0.133
