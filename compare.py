@@ -45,6 +45,7 @@ for i in range(100, 250, 5):
 
     mask = cv2.inRange(tree_img, lower_bound, upper_bound)
 
+    cv2.imwrite("compare/" + filename[:-4] + "/mask_" + str(i) + ".png", mask)
 
     cropped_tree = np.array([np.repeat([mask[0:sun_radius*2+1, 0:sun_radius*2+1]], pos_y.size, axis=0)])
     for x in pos_x:
@@ -77,5 +78,4 @@ for i in range(100, 250, 5):
     matched_values = np.logical_and(lai >= min_transmission, lai <= max_transmission)
 
     plt.imshow(matched_values, cmap="gray")
-
     plt.savefig("compare/" + filename[:-4] + "/match_" + str(i) + ".png")
