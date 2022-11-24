@@ -79,3 +79,4 @@ for i in range(100, 250, 5):
 
     plt.imshow(matched_values, cmap="gray")
     plt.savefig("compare/" + filename[:-4] + "/match_" + str(i) + ".png")
+    plt.close()
